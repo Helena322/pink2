@@ -1,0 +1,36 @@
+.page {
+  min-width: 320px;
+  background: white;
+  color: @dark-blue;
+  font-family: "Open Sans", "Arial", sans-serif;
+  line-height: 120%;
+}
+
+.page-body {
+  margin: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .page {
+    min-width: 660px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page {
+    min-width: 1200px;
+  }
+
+  .page-main .block-intro-background {
+    position: relative;
+    min-height: 729px;
+    background-image: url("../../img/back-desktop.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/back-desktop@2x.jpg");
+    }
+  }
+}

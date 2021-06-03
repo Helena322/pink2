@@ -1,0 +1,31 @@
+.text-input {
+  width: 100%;
+  font-family: inherit;
+  border: 2px solid @border-color;
+  border-radius: 1px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+  box-sizing: border-box;
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+
+.text-input::placeholder {
+  color: @dark-blue;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.text-input:hover {
+  border: 2px solid black;
+}
+
+.text-input:focus,
+.text-input:active {
+  border: 2px solid @pink;
+  outline: none;
+}

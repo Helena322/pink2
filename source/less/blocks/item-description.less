@@ -1,0 +1,26 @@
+@media (min-width: @mobile-width-only) {
+  .item-description-tablet,
+  .item-description-desktop {
+    display: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .item-description-mobile {
+    display: none;
+  }
+
+  .item-description-tablet {
+    display: block;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .item-description-tablet {
+    display: none;
+  }
+
+  .item-description-desktop {
+    display: block;
+  }
+}

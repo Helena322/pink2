@@ -1,0 +1,269 @@
+.icon__toggle {
+  background: none;
+  border: none;
+  width: 48px;
+  height: 48px;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.icon__box {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.icon__range {
+  display: none;
+  width: 240px;
+  position: absolute;
+  top: 81px;
+  left: -17px;
+  box-sizing: border-box;
+  z-index: 10;
+  appearance: none;
+}
+
+.icon__hidden {
+  display: none;
+}
+
+.icon__fill path,
+.icon__contrast path {
+  fill: @dark-border;
+}
+
+.icon__crop:hover path,
+.icon__fill:hover path,
+.icon__contrast:hover path {
+  fill: @border;
+}
+
+.icon__crop:active path,
+.icon__fill:active path,
+.icon__contrast:active path {
+  fill: @dark-border;
+}
+
+.icon__crop:focus path,
+.icon__fill:focus path,
+.icon__contrast:focus path {
+  fill: @pink;
+  opacity: 1;
+}
+
+@media (min-width: @mobile-width-only) {
+  .icon__crop--small,
+  .icon__contrast--small,
+  .icon__fill--small {
+    display: none;
+  }
+
+  .icon__crop--normal {
+    fill: @pink;
+  }
+
+  .icon__contrast--normal,
+  .icon__fill--normal {
+    fill: @dark-blue;
+    opacity: 0.3;
+  }
+
+  .icon__contrast--normal:hover,
+  .icon__fill--normal:hover {
+    fill: @dark-blue;
+    opacity: 0.5;
+  }
+
+  .icon__contrast--normal:active,
+  .icon__fill--normal:active {
+    fill: @pink;
+    opacity: 1;
+  }
+
+  .icon__toggle:focus .icon__contrast--normal,
+  .icon__toggle:focus .icon__fill--normal {
+    fill: @pink;
+    opacity: 1;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .icon__toggle {
+    height: 22px;
+    width: 22px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .icon__box {
+    text-align: left;
+    height: 22px;
+    width: 22px;
+  }
+
+  .icon__hidden {
+    display: block;
+  }
+
+  .icon__box-third {
+    margin: -4px 0 0 3px;
+  }
+
+  .icon__range {
+    display: none;
+    width: 202px;
+    top: 8px;
+    box-sizing: border-box;
+    left: 49px;
+  }
+
+  .icon__range-box {
+    width: 202px;
+    top: -5px;
+    left: 51px;
+  }
+
+  .icon__range-crop .range-box__toggle {
+    left: 160px;
+  }
+
+  .icon__range-fill {
+    top: -6px;
+
+    .range-box__toggle {
+      left: 25px;
+    }
+  }
+
+  .icon__range-contrast {
+    top: -9px;
+
+    .range-box__toggle {
+      left: 96px;
+    }
+  }
+
+  .icon__crop--normal,
+  .icon__contrast--normal,
+  .icon__fill--normal {
+    display: none;
+  }
+
+  .icon__crop--small,
+  .icon__contrast--small,
+  .icon__fill--small {
+    display: block;
+    fill: @pink;
+    opacity: 1;
+  }
+
+  .icon__contrast--small:active,
+  .icon__fill--small:active,
+  .icon__contrast--small:hover,
+  .icon__fill--small:hover {
+    fill: @pink;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .icon__toggle {
+    width: 48px;
+    height: 48px;
+
+    &:nth-child(2) {
+      padding-left: 2px;
+    }
+  }
+
+  .icon__box {
+    width: 48px;
+    height: 48px;
+  }
+
+  .icon__range {
+    display: none;
+    width: 288px;
+    left: 92px;
+  }
+
+  .icon__range-crop {
+    top: 19px;
+  }
+
+  .icon__range-box {
+    width: 288px;
+    top: 5px;
+    left: 92px;
+  }
+
+  .icon__range-crop .range-box__toggle {
+    left: 234px;
+    top: 9px;
+  }
+
+  .icon__range-fill {
+    top: 11px;
+    left: 92px;
+
+    .range-box__toggle {
+      top: 9px;
+      left: 36px;
+    }
+  }
+
+  .icon__range-contrast {
+    top: 14px;
+    left: 92px;
+
+    .range-box__toggle {
+      top: 9px;
+      left: 137px;
+    }
+  }
+
+  .icon__crop--small,
+  .icon__contrast--small,
+  .icon__fill--small {
+    display: none;
+  }
+
+  .icon__crop--normal {
+    display: block;
+    margin: -6px 0 0 0;
+  }
+
+  .icon__contrast--normal {
+    display: block;
+    margin: 18px 0 0 3px;
+  }
+
+  .icon__fill--normal {
+    display: block;
+    margin: 4px 0 0 0;
+  }
+
+  .icon__contrast--normal,
+  .icon__fill--normal {
+    fill: @pink;
+  }
+
+  .icon__crop:hover,
+  .icon__fill:hover,
+  .icon__contrast:hover,
+  .icon__crop:active,
+  .icon__fill:active,
+  .icon__contrast:active {
+    fill: @pink;
+    opacity: 1;
+  }
+
+  .icon__crop--normal,
+  .icon__fill--normal,
+  .icon__contrast--normal {
+    fill: @pink;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,155 @@
+.name__box {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px 30px 20px;
+}
+
+.name__text {
+  color: @pink;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 30px;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-left: 15px;
+}
+
+.name__input {
+  min-width: 276px;
+  min-height: 64px;
+  border: 2px solid @border-color;
+  border-radius: 1px;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+  padding-left: 15px;
+
+  &:hover {
+    border: 2px solid black;
+  }
+
+  &:active,
+  &:focus {
+    border: 2px solid @pink;
+    outline: none;
+  }
+}
+
+.name__input::placeholder {
+  color: @pink;
+  opacity: 1;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.name__label {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+.name-title-second {
+  display: none;
+  padding: 0;
+}
+
+@media (min-width: @mobile-width-only) {
+  .name__box {
+    padding-bottom: 0;
+
+    &:first-child {
+      margin-bottom: 17px;
+    }
+
+    &:nth-child(2) {
+      margin-bottom: 17px;
+    }
+  }
+
+  .name__second-name,
+  .name__name,
+  .name__patronymic {
+    margin-bottom: 4px;
+  }
+
+  .name__text {
+    padding-left: 23px;
+  }
+
+  .name__input {
+    padding-left: 20px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .name__second-name,
+  .name__name,
+  .name__patronymic {
+    margin-bottom: 0;
+  }
+
+  .name__label {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .name__input {
+    width: 100%;
+    min-height: 62px;
+  }
+
+  .name__text {
+    margin-right: 19px;
+    padding: 0;
+  }
+
+  .name__box {
+    padding: 0;
+
+    &:first-child {
+      margin-bottom: 53px;
+    }
+
+    &:nth-child(2) {
+      margin-bottom: 53px;
+    }
+  }
+
+  .name-title-second {
+    display: inline;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .name__label {
+    padding-right: 10px;
+  }
+
+  .name__box {
+    padding: 0;
+
+    &:first-child {
+      margin-bottom: 55px;
+    }
+
+    &:nth-child(2) {
+      margin-bottom: 53px;
+    }
+
+    &:nth-child(3) {
+      margin-bottom: 1px;
+    }
+  }
+
+  .name-title-second {
+    display: inline;
+    padding: 0;
+  }
+}

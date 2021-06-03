@@ -1,0 +1,41 @@
+.small-block {
+  text-align: center;
+}
+
+.small-text {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 30px;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.small-star {
+  color: @pink;
+}
+
+.small-text-desktop {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .small-block {
+    padding-top: 17px;
+    text-align: right;
+  }
+
+  .small-text {
+    margin-right: -1px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .small-block {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .small-text-desktop {
+    display: inline;
+  }
+}

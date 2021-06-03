@@ -1,0 +1,124 @@
+.radio {
+  min-height: 285px;
+  background: @light-gray;
+  border: none;
+  text-align: center;
+  padding: 39px 0 13px 0;
+}
+
+.radio__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.radio__title {
+  color: @pink;
+  font-size: 14px;
+  line-height: 18px;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.radio__text {
+  color: @dark-blue;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+  align-items: center;
+  padding-left: 90px;
+}
+
+.radio__input {
+  display: none;
+}
+
+.radio__box {
+  margin-bottom: 33px;
+  padding-top: 0;
+}
+
+.radio__label {
+  display: block;
+  position: relative;
+  padding-top: 12px;
+  outline: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 37px;
+    width: 37px;
+    left: 20px;
+    top: 6px;
+    border: 2px solid @border-color;
+    border-radius: 50%;
+    background-color: white;
+    z-index: 5;
+  }
+}
+
+.radio__input + .radio__label:hover::before {
+  border: 2px solid black;
+  outline: none;
+}
+
+.radio__input + .radio__label:active::before,
+.radio__input + .radio__label:focus::before {
+  border: 2px solid @pink;
+  outline: none;
+}
+
+.radio__input:checked + .radio__label::after {
+  content: "";
+  position: absolute;
+  height: 11px;
+  width: 11px;
+  left: 33px;
+  top: 19px;
+  border: 2px solid @pink;
+  border-radius: 50%;
+  background-color: @pink;
+  z-index: 10;
+}
+
+@media (min-width: @tablet-width) {
+  .radio__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 39px;
+  }
+
+  .radio {
+    min-width: 295px;
+    padding-top: 29px;
+    padding-bottom: 0;
+    margin-bottom: 44px;
+    background: white;
+  }
+
+  .radio__text {
+    padding-left: 80px;
+  }
+
+  .radio__box {
+    margin-bottom: 34px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .radio__container {
+    min-height: 240px;
+    padding-left: 53px;
+  }
+
+  .radio {
+    min-width: 295px;
+    padding-top: 41px;
+    padding-left: 10px;
+    padding-bottom: 0;
+    margin-bottom: 1px;
+    background: white;
+  }
+}

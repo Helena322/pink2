@@ -1,0 +1,385 @@
+.user-name {
+  border: none;
+  margin: 0;
+  padding-top: 40px;
+}
+
+.user__container {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.user__legend {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 30px;
+  align-items: center;
+  text-align: center;
+  padding: 43px 20px 0 20px;
+  margin: 0;
+}
+
+.user__personal-data {
+  text-align: center;
+  margin-bottom: 43px;
+}
+
+.user__submit {
+  text-align: center;
+  margin-bottom: 33px;
+}
+
+.user__button {
+  font-family: "Open Sans", "Arial", sans-serif;
+  min-width: 280px;
+  min-height: 64px;
+  color: white;
+  background: @button-green;
+  border: 2px solid @button-green;
+  border-radius: 1px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+  align-items: center;
+  text-transform: uppercase;
+
+  &:hover {
+    background: @background-button;
+  }
+
+  &:active,
+  &:focus {
+    color: @white-translucent;
+  }
+}
+
+.user__button-disabled {
+  color: white;
+  background: @border-color;
+  border: 2px solid @border-color;
+}
+
+.user-contacts__title {
+  color: @pink;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 30px;
+  align-items: center;
+  text-transform: uppercase;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 30px;
+}
+
+.user__send {
+  padding-top: 53px;
+}
+
+.user__legend-text {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 30px;
+  margin-top: 0;
+  margin-bottom: 43px;
+}
+
+.user-radio__title {
+  color: @pink;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0 25px;
+  margin-bottom: 37px;
+}
+
+.user__legend-filter {
+  padding-top: 22px;
+}
+
+@media (min-width: @mobile-width-only) {
+  .user-contacts__title {
+    display: none;
+  }
+
+  .user__legend-catalog {
+    padding: 44px 20px 0 20px;
+    margin-bottom: 50px;
+  }
+
+  .user-name {
+    padding-top: 35px;
+  }
+
+  .user-radio__title {
+    margin-bottom: 26px;
+  }
+
+  .user__catalog-tablet,
+  .user__catalog-desktop,
+  .user-catalog-tablet,
+  .user-catalog-desktop {
+    display: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .user__catalog-mobile,
+  .user-catalog-mobile {
+    display: none;
+  }
+
+  .user__catalog-tablet {
+    display: block;
+    margin-bottom: 0;
+  }
+
+  .user-catalog-tablet {
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    display: block;
+  }
+
+  .user-contacts__title {
+    display: block;
+  }
+
+  .user__container {
+    border: 2px solid @border-color;
+    border-radius: 1px;
+    padding-bottom: 10px;
+  }
+
+  .user__name {
+    border: none;
+  }
+
+  .user__form {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  .user-name {
+    padding-top: 73px;
+    order: 0;
+  }
+
+  .user-radio {
+    background: white;
+    order: 0;
+  }
+
+  .user-checkbox {
+    background: white;
+    margin-bottom: 11px;
+    padding: 0;
+    order: 2;
+  }
+
+  .user-emotion {
+    padding: 0;
+    margin-bottom: 67px;
+    order: 2;
+  }
+
+  .user__button {
+    min-width: 298px;
+    min-height: 63px;
+  }
+
+  .user__submit {
+    padding-right: 12px;
+  }
+
+  .user__send {
+    grid-area: send;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 1px;
+    order: 2;
+  }
+
+  .user__legend {
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 0;
+    padding: 91px 50px 0 50px;
+  }
+
+  .user__legend-filter {
+    padding-top: 0;
+    margin: 0;
+  }
+
+  .user__legend-text {
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 70px;
+  }
+
+  .user__personal-data {
+    min-height: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-bottom: 20px;
+  }
+
+  .user-contacts__container {
+    padding: 28px 58px 0;
+  }
+
+  .user-radio__container {
+    min-height: 292px;
+    min-width: 295px;
+  }
+
+  .user-radio__title {
+    margin-bottom: 36px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .user-contacts {
+    margin-bottom: 21px;
+    order: 1;
+  }
+
+  .user__legend-catalog {
+    padding: 91px 50px 0;
+    margin-bottom: 77px;
+  }
+
+  .user__box {
+    display: flex;
+    max-width: 1200px;
+    justify-content: center;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .user__form {
+    display: grid;
+    grid-row-gap: 20px;
+    grid-column-gap: 50px;
+    grid-template-columns: 445px 445px;
+    grid-template-areas:
+      "name radio"
+      "contacts contacts"
+      "checkbox checkbox"
+      "emotion emotion"
+      "send send";
+  }
+
+  .user-name {
+    grid-area: name;
+    min-height: 295px;
+    margin: 0;
+    padding-top: 56px;
+  }
+
+  .user-radio {
+    grid-area: radio;
+    margin: 0;
+    padding: 41px 0 0 10px;
+  }
+
+  .user-radio__title {
+    margin-bottom: 38px;
+  }
+
+  .user-contacts {
+    grid-area: contacts;
+    margin-bottom: 0;
+    padding: 0;
+    order: 1;
+  }
+
+  .user-checkbox {
+    grid-area: checkbox;
+    margin-bottom: -13px;
+    padding: 0;
+  }
+
+  .user-emotion {
+    grid-area: emotion;
+    margin-bottom: 47px;
+    padding: 0;
+  }
+
+  .user-radio__container {
+    min-height: 295px;
+  }
+
+  .user-box__title {
+    margin-top: -110px;
+    min-height: 394px;
+    background-image: url("../../img/back-desktop.jpg");
+    background-position: top;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/back-desktop@2x.jpg");
+    }
+  }
+
+  .user__legend {
+    margin-bottom: 30px;
+    padding: 91px 210px 0 210px;
+  }
+
+  .user__personal-data {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .user-contacts__container {
+    padding: 28px 60px 0 60px;
+  }
+
+  .user__legend-filter {
+    margin: 0;
+    padding: 0;
+  }
+
+  .user__legend-text {
+    margin-bottom: 67px;
+  }
+
+  .user__send {
+    padding: 0;
+  }
+
+  .user__submit {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+  }
+
+  .user__catalog-tablet,
+  .user-catalog-tablet {
+    display: none;
+  }
+
+  .user__catalog-desktop,
+  .user-catalog-desktop {
+    display: block;
+  }
+
+  .user__legend-catalog {
+    margin-bottom: 89px;
+    padding: 91px 210px 0 210px;
+  }
+}

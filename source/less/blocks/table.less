@@ -1,0 +1,140 @@
+.table-block {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  background: @light-gray;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.table__rates {
+  position: relative;
+  width: 832px;
+  display: flex;
+  flex-direction: column;
+  table-layout: fixed;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  margin-bottom: 40px;
+}
+
+.table__button {
+  align-items: center;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.table__toggles {
+  margin: 0;
+}
+
+.table__slider {
+  display: flex;
+  height: 6px;
+  align-items: center;
+  text-align: center;
+  border: none;
+}
+
+.table__slider-toggle {
+  position: relative;
+  width: 6px;
+  height: 6px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  outline: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 6px;
+    width: 6px;
+    left: 0;
+    top: 0;
+    border: 3px solid @light-gray;
+    border-radius: 50%;
+    background-color: @dark-blue;
+    opacity: 0.3;
+    z-index: 5;
+  }
+
+  &:nth-child(2) {
+    margin: 0 13px;
+  }
+}
+
+.table__slider-toggle:hover {
+  &::before {
+    width: 6px;
+    height: 6px;
+    opacity: 0.6;
+    outline: none;
+  }
+}
+
+.table__slider-toggle:active {
+  &::before {
+    width: 6px;
+    height: 6px;
+    opacity: 0.1;
+    outline: none;
+  }
+}
+
+@media (min-width: @mobile-width-only) {
+  .table-block {
+    overflow: hidden;
+
+    &::after {
+      overflow: visible;
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .table__rates::before,
+  .table__rates::after {
+    display: none;
+  }
+
+  .table__rates {
+    width: 624px;
+    margin-bottom: 67px;
+  }
+
+  .table__button {
+    display: none;
+  }
+
+  .table-block {
+    padding: 0 20px;
+
+    &::after {
+      height: 400px;
+      background-image: url("../../img/grey-background-tablet.svg");
+      top: -110px;
+      background-size: cover;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .table__button {
+    display: none;
+  }
+
+  .table-block {
+    padding: 0 130px;
+  }
+
+  .table__rates {
+    width: 946px;
+    margin-bottom: 92px;
+  }
+}

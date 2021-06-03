@@ -1,0 +1,82 @@
+.emotion {
+  border: none;
+  text-align: center;
+  padding-top: 38px;
+}
+
+.emotion__title {
+  color: @pink;
+  font-size: 14px;
+  line-height: 18px;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 40px;
+}
+
+.emotion__box {
+  padding: 0 20px;
+}
+
+.emotion__text {
+  width: 100%;
+  min-height: 202px;
+  resize: none;
+  box-sizing: border-box;
+  padding: 15px 0 0 20px;
+}
+
+.emotion__text::placeholder {
+  text-align: left;
+}
+
+@media (min-width: @mobile-width-only) {
+  .emotion__text,
+  .emotion__box {
+    height: 197px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .emotion__title {
+    margin-bottom: 36px;
+  }
+
+  .emotion__box {
+    height: 191px;
+    padding: 0 58px;
+  }
+
+  .emotion__text {
+    min-height: 191px;
+    max-height: 191px;
+    padding: 15px 0 0 20px;
+  }
+
+  .emotion__container {
+    height: 285px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .emotion__box {
+    height: 170px;
+  }
+
+  .emotion__container {
+    height: 210px;
+  }
+
+  .emotion__title {
+    margin-bottom: 34px;
+  }
+
+  .emotion__text {
+    min-height: 100px;
+    max-height: 128px;
+    padding: 14px 0 0 20px;
+  }
+}

@@ -1,0 +1,30 @@
+.photo-post {
+  align-items: center;
+  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .photo__container {
+    max-width: 620px;
+    display: grid;
+    grid-row-gap: 0;
+    grid-column-gap: 20px;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-items: center;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .photo__container {
+    max-width: 940px;
+    display: grid;
+    gap: 20px;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin: 0 auto;
+    padding: 0;
+  }
+}

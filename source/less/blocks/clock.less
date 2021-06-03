@@ -1,0 +1,143 @@
+.clock {
+  min-height: 350px;
+}
+
+.clock-img {
+  text-align: center;
+  background-image: url("../../img/24-tablet.svg");
+  background-repeat: no-repeat;
+  background-position: left 20px top 30px;
+}
+
+.clock__title {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 36px;
+  align-items: center;
+  color: black;
+  padding-right: 60px;
+  margin: 0 0 10px 0;
+}
+
+.clock__text {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  align-items: center;
+  margin: 0 0 10px 0;
+}
+
+.clock__link {
+  color: @pink;
+  font-size: 14px;
+  line-height: 24px;
+  align-items: center;
+  text-decoration-line: underline;
+
+  &:hover {
+    color: @dark-blue;
+    text-decoration: underline;
+  }
+
+  &:focus,
+  &:active {
+    color: @dark-blue;
+    text-decoration: none;
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: @mobile-width-only) {
+  .clock,
+  .clock__tablet,
+  .clock__desktop {
+    display: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .clock__tablet {
+    display: block;
+    text-align: start;
+  }
+
+  .clock__block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 72px;
+    margin-left: 330px;
+    margin-right: 0;
+  }
+
+  .clock {
+    display: block;
+    max-width: 660px;
+    margin: 0 auto;
+  }
+
+  .clock__title {
+    font-weight: bold;
+    text-align: start;
+    padding-left: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .clock {
+    background-color: @light-gray;
+    min-height: 422px;
+  }
+
+  .clock-img {
+    display: flex;
+    max-width: 100%;
+    background-image: none;
+
+    &::before {
+      content: "";
+      width: 855px;
+      height: 360px;
+      background-image: url("../../img/24-desktop.svg");
+      background-repeat: no-repeat;
+      background-position: right 71px top 11px;
+      margin-right: 0;
+      margin-left: auto;
+    }
+  }
+
+  .clock__block {
+    max-width: 1200px;
+    padding: 106px 0 0;
+    margin: 0 auto;
+  }
+
+  .clock__title {
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    padding-right: 150px;
+  }
+
+  .clock__text {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 30px;
+  }
+
+  .clock__link {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .clock__tablet {
+    display: none;
+  }
+
+  .clock__desktop {
+    display: block;
+    text-align: start;
+  }
+}

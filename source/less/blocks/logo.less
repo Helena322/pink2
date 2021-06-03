@@ -1,0 +1,36 @@
+@media (min-width: @mobile-width-only) {
+  .logo__desktop {
+    display: none;
+  }
+}
+
+@media (max-width: @mobile-tablet-width) {
+  .logo__mobile-tablet:hover {
+    fill: @pink;
+  }
+
+  .logo__mobile-tablet:active {
+    fill: @dark-blue;
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .logo__mobile-tablet {
+    display: none;
+  }
+
+  .logo__desktop {
+    display: block;
+    fill: @dark-blue;
+  }
+
+  .logo__desktop:hover {
+    fill: @pink;
+  }
+
+  .logo__desktop:active {
+    fill: @dark-blue;
+    opacity: 0.3;
+  }
+}
